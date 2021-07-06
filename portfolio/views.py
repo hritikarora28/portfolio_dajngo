@@ -4,8 +4,8 @@ from django.http import HttpResponse
 # Create your views here.
 
 def home(request):
-    return HttpResponse("We are is home")
+    return render(request,"home.html")
 def about(request):
-    return HttpResponse("We are is about")
+    return render(request,"about.html")
 def contact(request):
-    return HttpResponse("We are is contact")
+    return render(request,"contact.html")
