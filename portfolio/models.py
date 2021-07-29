@@ -11,6 +11,16 @@ class Contact(models.Model):
     content = models.TextField();
     def __str__(self) :
         return 'Message from'+self.name
+class hire(models.Model):
+    sno = models.AutoField(primary_key=True);
+    cname = models.CharField(max_length=10);
+    email = models.EmailField(max_length=50);
+    msg = models.TextField();
+    
+    def __str__(self) :
+        return 'Message from'+self.cname
+    
+    
 
 
    

@@ -1,19 +1,23 @@
-{% extends "base.html" %} {% block title %} Contact {% endblock title %}{% block body %}
+{% extends "base.html" %}
+{% block title %} Hire me {% endblock title %} 
+
+
+{% block body %}
 <main class="page hire-me-page">
 	<section class="portfolio-block hire-me">
 <div class="container ">
-	<div class="heading"><h2>Contact me</h2></div>
-	<form method="post" action="contact">
+	<div class="heading"><h2>Hire me</h2></div>
+	<form method="post" action="hireme">
 		{% csrf_token %}
 		<div class="form-group">
-			<label for="name">Name</label>
+			<label for="cname">Company Name</label>
 			<input
 				type="text"
 				class="form-control"
-				id="name"
-				aria-describedby="name"
-				name="name"
-				placeholder="Enter Your Name"
+				id="cname"
+				aria-describedby="cname"
+				name="cname"
+				placeholder="Enter Your Company Name"
 			/>
 		</div>
 		<div class="form-group">
@@ -28,17 +32,14 @@
 			/>
 			<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
 		</div>
+		
 		<div class="form-group">
-			<label for="phone">Phone Number</label>
-			<input type="phone" class="form-control" id="phone" name="phone" placeholder="Phone Number" />
-		</div>
-		<div class="form-group">
-			<label for="content">How may we help you</label>
+			<label for="msg">Other deatils</label>
 			<textarea
 				type="textarea"
 				class="form-control"
-				id="content"
-				placeholder="Describe your issues"
+				id="msg"
+				placeholder="Your requirement"
 				cols="30"
 				rows="5"
 				name="msg"

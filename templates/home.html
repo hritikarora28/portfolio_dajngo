@@ -1,7 +1,87 @@
 {% extends "base.html" %}
 {% block title %} Home {% endblock title %} 
-{% block homeactive %}active{% endblock homeactive %}
+
 
 {% block body %}
-<h1>We are in home</h1>
+<main class="page lanidng-page">
+    <section class="portfolio-block block-intro">
+      <div class="container">
+        {% load static %}
+        <div
+            class="avatar"
+            style="
+              background-image: url('/static/img/about.png');
+            "
+          ></div>
+        <div class="about-me">
+          <p>
+            Hello! I am <strong>Hritik Arora</strong>. I am a student,
+            Web devloper,Python programmer. I love to learn new skills daily
+          </p>
+          <a class="btn btn-outline-primary" role="button" href="hireme"
+            >Hire me</a
+          >
+        </div>
+      </div>
+    </section>
+    
+    <section class="portfolio-block skills">
+      <div class="container">
+        <!-- Start: portfolio heading -->
+        <div class="heading"><h2>Special Skills</h2></div>
+        <!-- End: portfolio heading -->
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card special-skill-item border-0">
+              <div class="card-header bg-transparent border-0">
+                <i class="icon ion-ios-star-outline"></i>
+              </div>
+              <div class="card-body">
+                <h3 class="card-title">Web Devlopment</h3>
+                <p class="card-text">
+                  This is one of my favorite skills i have , i have projects in it you can my projects in github provided in projects section
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card special-skill-item border-0">
+              <div class="card-header bg-transparent border-0">
+                <i class="icon ion-ios-lightbulb-outline"></i>
+              </div>
+              <div class="card-body">
+                <h3 class="card-title">Python Programming</h3>
+                <p class="card-text">
+                  As we all know python is the future of programming language, there it is one my major skills 
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card special-skill-item border-0">
+              <div class="card-header bg-transparent border-0">
+                <i class="icon ion-ios-gear-outline"></i>
+              </div>
+              <div class="card-body">
+                <h3 class="card-title">Data Analytics</h3>
+                <p class="card-text">
+                  Just learing about datav Analytics it is a greate filed to learn about 
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="portfolio-block call-to-action border-bottom">
+        <div class="container">
+          <div class="d-flex justify-content-center align-items-center content">
+            <h3>Like what you see?</h3>
+            <a href="hireme"><button class="btn btn-outline-primary btn-lg" type="submit" >
+              Hire me
+            </button></a>
+          </div>
+        </div>
+      </section>
+  </main>
 {% endblock body %}

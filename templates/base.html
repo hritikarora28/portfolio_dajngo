@@ -10,26 +10,63 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
+    {% load static %}
+    <link
+      rel="stylesheet"
+      href="{% static 'css/style.css'%}"
+    >
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Lato:300,400,700"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.6.1/css/pikaday.min.css"
+    />
     {% block css %}  {% endblock css %}
 
     <title>{% block title %}   {% endblock title %}</title>
   </head>
   <body>
-
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="/">HritikWeb</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav">
-            <a class="nav-item nav-link {% block homeactive %}  {% endblock homeactive %}" href="/">Home <span class="sr-only">(current)</span></a>
-            <a class="nav-item nav-link {% block aboutactive %}  {% endblock aboutactive %}" href="/about">About</a>
-            <a class="nav-item nav-link {% block contactactive %}  {% endblock contactactive %}" href="/contact">Contact</a>
-            
-          </div>
-        </div>
-      </nav>
+    <nav
+    class="
+      navbar navbar-dark navbar-expand-lg
+      fixed-top
+      bg-white
+      portfolio-navbar
+      gradient
+    "
+  >
+    <div class="container">
+      <a class="navbar-brand logo" href="/">Hritik Web</a
+      ><button
+        data-bs-toggle="collapse"
+        class="navbar-toggler"
+        data-bs-target="#navbarNav"
+      >
+        <span class="visually-hidden">Toggle navigation</span
+        ><span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://github.com/hritikarora28">Projects</a>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="/resume">Resume</a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="hireme">Hire me</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
       {% for message in messages  %}            
       <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
             <strong>Message : </strong> {{ message }}
@@ -39,7 +76,23 @@
           </div>
       {% endfor %}
     {% block body %}  {% endblock body %}
-
+    <footer class="page-footer">
+      <div class="container">
+        <div class="links">
+          <a href="/">About me</a><a href="https://github.com/hritikarora28">Projects</a>
+          <a href="/contact">Contact me</a
+            >
+        </div>
+        
+        
+        <div class="social-icons">
+          
+          <a href="https://www.linkedin.com/in/hritik-arora-b11a2a1b5/"><i class="icon ion-social-linkedin"></i></a
+          ><a href="https://github.com/hritikarora28"><i class="icon ion-social-github-outline"></i></a
+          ><a href="#"><i class="icon ion-social-twitter"></i></a>
+        </div>
+      </div>
+    </footer>
     
 
     <!-- Optional JavaScript -->
